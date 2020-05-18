@@ -24,8 +24,7 @@ if __name__ == '__main__':
 		with open(image_name, 'rb') as f:
 			image_bytes = f.read()
 
-		res = requests.get(api_url, json={'operation': operation,
-										 'image64': base64.b85encode(image_bytes).decode('utf-8')})
+		res = requests.get(api_url, json={'operation': operation, 'image64': base64.b85encode(image_bytes).decode('utf-8')})
 		
 		print(res.json()['body'])
 
@@ -38,8 +37,7 @@ if __name__ == '__main__':
 			print ('You need to specify the unityid of the person whose records need to be fetched')
 			exit(0)
 
-		res = requests.get(api_url, json={'operation': operation,
-										'unity_id': unity_id})
+		res = requests.get(api_url, json={'operation': operation, 'unity_id': unity_id})
 
 		data = res.json()['body']
 
