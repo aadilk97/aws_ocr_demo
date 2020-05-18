@@ -9,3 +9,5 @@ if parm1 is 'Fetch' parm2 must be unityid of a person who's records have already
 # Sample command
 
 python3 ocr.py image-ocr ocr_stud2.png
+python3 ocr.py Fetch uid2
+
